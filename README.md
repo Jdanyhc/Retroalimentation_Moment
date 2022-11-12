@@ -1,9 +1,9 @@
 # Retroalimentation_Moment
 
 
-# Project Title
+# NLP Module Project
 
-Simple overview of use/purpose.
+Use of Appi's for sentiment analysis, NER and translator
 
 ## Description
 
