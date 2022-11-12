@@ -32,14 +32,8 @@ https://www.statmt.org/europarl/v7/es-en.tgz
 
 Execute the  
 
-Python MIKAELA.py
+python -m MIKAELA.py 
 
-Tests: 
-
-To run tests, from the root dir of the repo, call: 
-```
-python -m pytest tests
-```
 
 ## Authors
 
