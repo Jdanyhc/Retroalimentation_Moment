@@ -5,6 +5,8 @@
 
 Use of Appi's for sentiment analysis, NER and translator
 
+the complete execu
+
 ## Description
 
 In this repository, the activities related to the development of a Sentiment Analysis, a NER model and a translator.
@@ -24,6 +26,7 @@ https://www.statmt.org/europarl/v7/es-en.tgz
 !pip install tokenizers
 
 * hint: using requirements.txt ;)
+
 
 ### Executing program
 
@@ -50,3 +53,11 @@ https://rapidapi.com/armangokka/api/translo
 https://rapidapi.com/gatzuma/api/deep-translate1/
 
 https://huggingface.co/datasets/wikiann
+
+
+## Warinings
+the complete execution and the results are visible in the following colab link:
+
+https://colab.research.google.com/drive/17Y-mxDBFiR9RO1V27QQeRBw9xswCn0t-?usp=sharing
+
+sorry github is not used :(
