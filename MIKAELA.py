@@ -11,9 +11,9 @@ Original file is located at
 dolwoad the respective libraries
 """
 
-!pip install transformers
+!pip install transformers # remove these! instead, explain how to install in a github script 
 
-"""import the model for the sentiment analysis of huggiface"""
+"""import the model for the sentiment analysis of huggiface""" # check spelling -- spelling is important because other engineers will search your code, and search doesnt work with misspellings! :( 
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
@@ -30,6 +30,9 @@ data = f.readlines()
 
 data # print document for check correct import the data
 
+# make these into functions, or classes with functions! here is some info: https://www.dataquest.io/blog/using-classes-in-python/
+
+
 import torch # import torch
 
 for idx, line in enumerate(data, start=1): #enumerate respuest
@@ -44,6 +47,7 @@ for idx, line in enumerate(data, start=1): #enumerate respuest
 
 """##Second Part"""
 
+# all imports should be at the top, and I recommend splitting into one file for each section to keep things more organized
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 
 tokenizer_2 = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
@@ -80,6 +84,7 @@ prueb_es = doc_es[0:100] #select 100 cases
 
 print(len(prueb_es))
 
+# make filenames and numbers into constants at top of file! 
 en = open("/content/europarl-v7.es-en.en","r",encoding="utf-8") #lecture data of english text
 
 doc_en = en.readlines()
@@ -87,6 +92,10 @@ doc_en = en.readlines()
 prueb_en = doc_en[0:100] #select 100 cases
 
 print(len(prueb_es))
+
+
+#Unfinished! finish for final submission
+
 
 import requests
 import json
@@ -133,6 +142,8 @@ for i in doc_en:
   dictionary = json.loads(response.text)
   print(dictionary["batch_translations"][0]["text"])
 
-from nltk.translate.bleu_score import sentence_bleu
+from nltk.translate.bleu_score import sentence_bleu # all imports at top! https://peps.python.org/pep-0008/#imports for more info
 
 score_ibm_bleu = sentence_bleu(doc_es[i].split(), dictionary["batch_translations"][0]["text"].split())
+
+# Add tests! 
