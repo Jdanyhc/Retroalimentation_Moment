@@ -107,5 +107,5 @@ def Scores_translate():# this function claculate the scores for 3 previews trans
 Scores_translate()
 
 #close the documents
-doc_en.close
-doc_es.close
+doc_en.close()
+doc_es.close()
