@@ -15,8 +15,10 @@ doc_en = en.readlines() # read lines of english document
 prueb_en = doc_en[0:100] #select 100 cases
 print("Document length in English: ", len(prueb_es)) # Check the length of spanish document
 
-def traductor_1():
-  traducciones_1 =[]
+
+#Deep Translate
+def traductor_1(): 
+  traducciones_1 =[] #list for save the translations
   url = "https://deep-translate1.p.rapidapi.com/language/translate/v2"
   for line in doc_en:
     payload = {
@@ -26,7 +28,7 @@ def traductor_1():
     }
     headers = {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c",
+      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c", #change the key
       "X-RapidAPI-Host": "deep-translate1.p.rapidapi.com"
     }
 
@@ -35,12 +37,14 @@ def traductor_1():
     dictionary_2 = json.loads(response.text)
     trad_1 = (dictionary_2["data"]["translations"]["translatedText"])
 
-    traducciones_1.append(trad_1)
+    traducciones_1.append(trad_1)#add translations to the list
     
 traductor_1()
 
+
+#translo
 def traductor_2():
-  traducciones_2 = []
+  traducciones_2 = []#list for save the translations
   url = "https://translo.p.rapidapi.com/api/v3/batch_translate"
   for line in doc_en:
     payload = [
@@ -52,7 +56,7 @@ def traductor_2():
     ]
     headers = {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c",
+      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c",#change the key
       "X-RapidAPI-Host": "translo.p.rapidapi.com"
     }
 
@@ -60,12 +64,13 @@ def traductor_2():
 
     dictionary = json.loads(response.text)
     trad_2 = (dictionary["batch_translations"][0]["text"])
-    traducciones_2.append(trad_2)
+    traducciones_2.append(trad_2)#add translations to the list
 
 traductor_2()
 
+#ai translate
 def traductor_3():
-  traducciones_3 = []
+  traducciones_3 = []#list for save the translations
   url = "https://ai-translate.p.rapidapi.com/translates"
   for line in doc_en:
     payload = {
@@ -75,7 +80,7 @@ def traductor_3():
     }
     headers = {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c",
+      "X-RapidAPI-Key": "cef5dbb7e7msh89907f251126654p16d8ecjsn6090cb4af60c",#change the key
       "X-RapidAPI-Host": "ai-translate.p.rapidapi.com"
     }
 
@@ -83,11 +88,11 @@ def traductor_3():
     dictionary_3 = json.loads(response.text)
     trad_3 = (dictionary_3[0]["texts"])
 
-    traducciones_3.append(trad_3)
+    traducciones_3.append(trad_3)#add translations to the list
 
 traductor_3()
 
-def Scores_translate():
+def Scores_translate():# this function claculate the scores for 3 previews translates functions
   for line in doc_es:
     scores_1 =[]
     scores_2 =[]
@@ -101,5 +106,6 @@ def Scores_translate():
 
 Scores_translate()
 
+#close the documents
 doc_en.close
 doc_es.close
