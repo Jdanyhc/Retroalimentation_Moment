@@ -2,8 +2,7 @@
 
 ## FIRST TASK:
 
-
-
+In this first activity, a model from hugginface was requested to be taken, which had the ability to perform a sentiment analysis so that later data from a txt file was given so that the model could determine if the sentiment that existed in the sentences was positive or negative, for this part we had the dataset which is found in this repository with the name: tiny_movie_reviews_dataset (1).txt
 
 The following shows the results obtained from the tests carried out with the algorithm taken from hugginface
 ![image](https://user-images.githubusercontent.com/99751023/205555200-d0c28334-9675-46c5-a3a2-86c5636c010a.png)
